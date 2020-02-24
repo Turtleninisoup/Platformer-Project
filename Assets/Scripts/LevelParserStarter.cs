@@ -16,6 +16,8 @@ public class LevelParserStarter : MonoBehaviour
 
     public GameObject Stone;
 
+    public GameObject Lakitu;
+
     public Transform parentTransform;
 
     int pointsCount;
@@ -81,6 +83,10 @@ public class LevelParserStarter : MonoBehaviour
                 break;
             case 's': Debug.Log("Spawn Rock");
                 ToSpawn = Stone;
+                break;
+            case 'l':
+                Debug.Log("Spawn Lakitu");
+                ToSpawn = Lakitu;
                 break;
             //default: Debug.Log("Default Entered"); break;
             default: return;
