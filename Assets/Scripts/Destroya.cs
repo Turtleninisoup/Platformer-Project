@@ -19,11 +19,18 @@ public class Destroya : MonoBehaviour
 
     LevelParserStarter thing;
 
+    Rigidbody rbp1;
+
+    Rigidbody rbp2;
+
+    public GameObject gogo;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rbp1 = gogo.gameObject.GetComponent<Rigidbody>();
+        rbp2 = gogo.gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -31,8 +38,7 @@ public class Destroya : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Destroy(thing.gameObject);
-
+            Destroy(gameObject);
             if (gameObject == thing.QuestionBox)
             {
                 coinsCount++;
@@ -46,7 +52,7 @@ public class Destroya : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Destroy(this.gameObject);
+        Destroy(gogo);
     }
 
 
