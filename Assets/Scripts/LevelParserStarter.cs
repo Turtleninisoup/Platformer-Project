@@ -20,17 +20,7 @@ public class LevelParserStarter : MonoBehaviour
 
     public Transform parentTransform;
 
-    int pointsCount;
-
-    int timeCount;
-
-    int coinsCount;
-
-    public Text points;
-
-    public Text time;
-
-    public Text coins;
+    
 
 
     // Start is called before the first frame update
@@ -110,26 +100,9 @@ public class LevelParserStarter : MonoBehaviour
         FileParser();
     }
 
-    public void OnMouseDown()
-    {
-        Destroy(gameObject);
-    }
-
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Destroy(gameObject);
-
-            if (gameObject == QuestionBox)
-            {
-                coinsCount++;
-            }
-        }
-
-        points.text = pointsCount.ToString();
-        time.text = timeCount.ToString();
-        coins.text = coinsCount.ToString();
+        
 
 
     }
